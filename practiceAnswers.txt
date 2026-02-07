@@ -1,0 +1,72 @@
+
+
+
+Question 1: What was wrong?
+Answer 1: between "checkInDate" and "checkOutDate". A comma was missing between "checkInDate": "2024-05-15" and "checkOutDate": "2024-05-20".
+Why is it a problem in json? 
+Answer: JSON requires commas between (key:value) pairs; missing it makes the JSON invalid.
+What did you change to fix it?
+Answer: Added a comma after "checkInDate": "2024-05-15",.
+
+Question 2:what was wrong?
+The first guest object has name: "Alice Johnson". 
+Why is it a problem in JSON?
+Answer: the key name was not quoted. JSON requires all keys to be double quoted ("") strings.
+What did you change to fix it?
+Answerr: I changed (name: "Alice Johnson") to "name": "Alice Johnson".
+
+
+Question 3: What was wrong?
+Answer: Bob Smith’s age is set as undefined
+Why is it a problem in JSON?
+Answer: JSON does not allow undefined as a value; only null, numbers, strings, booleans, arrays, or objects are valid.
+What did you change to fix it?
+Answer: I Replaced undefined with null: "age": null.
+
+
+
+Question 4: What was wrong?
+Answer: There is a trailing comma in the "amenities" array. 
+Why is it a problem in JSON?
+Answer: Trailing commas are not allowed in JSON arrays. JSON parsers will throw an error if an array or object ends with a comma.
+What did you change to fix it?
+Answer: I Removed the trailing comma: ["WiFi", "Breakfast", "Parking"].
+
+Question 5: What was wrong?
+Answer: Bob’s email is "bob.smith@example". Is this valid?
+Why is it a problem in json?
+Answer: Technically yes, JSON allows any string. The email format is incomplete for real world usage.
+what did you change to fix it?
+Answer: I was Corrected to "bob.smith@example.com".
+
+
+1. What tools or techniques did you use to identify the errors?
+I mainly used JSONLint to check for syntax errors. It quickly highlighted things like missing commas, unquoted keys, and trailing commas.
+I also went through the JSON manually, line by line, to spot any small mistakes that a validator might not catch, and I relied on syntax highlighting in my editor to make issues more obvious.
+
+2️. How did you confirm that your corrected JSON file was valid?
+After making the fixes, I pasted the JSON back into JSONLint and it said it was valid.
+I also looked over it in my code editor to make sure all the commas, quotes, and values were in the right place, just to be extra safe.
+
+3️. Which errors were the most difficult to spot? Why?
+The hardest ones were the unquoted key (name) and the trailing comma in the amenities array.
+Both of these are small and easy to miss because they can look fine at first glance, especially if you’re scanning quickly.
+
+4️. What strategies can help you avoid these kinds of errors in the future?
+I think the best ways to avoid these mistakes are: using JSON validators or linters regularly,
+making sure syntax highlighting is on, and writing JSON by example  starting with a correct structure and copying the format. 
+Also, being careful with commas and quotes and double-checking after every change really helps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

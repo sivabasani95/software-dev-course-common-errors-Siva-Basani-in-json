@@ -44,6 +44,7 @@ but it contains multiple syntax errors that prevent it from being parsed.
 // 🔍 Provided JSON File with Errors
 // ============================================
 
+
 const invalidBookingJSON = `
 {
   "hotelName": "Grand City Hotel",
